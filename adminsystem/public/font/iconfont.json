@@ -1,0 +1,198 @@
+{
+  "id": "2494578",
+  "name": "no name",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "392209",
+      "name": "箱子",
+      "font_class": "1",
+      "unicode": "e6d0",
+      "unicode_decimal": 59088
+    },
+    {
+      "icon_id": "681021",
+      "name": "立方体2",
+      "font_class": "lifangti2",
+      "unicode": "e72e",
+      "unicode_decimal": 59182
+    },
+    {
+      "icon_id": "689264",
+      "name": "立方体 立体 多面体 方块2",
+      "font_class": "lifangtilitiduomiantifangkuai2",
+      "unicode": "e7fb",
+      "unicode_decimal": 59387
+    },
+    {
+      "icon_id": "802969",
+      "name": "楼房",
+      "font_class": "loufang",
+      "unicode": "e64f",
+      "unicode_decimal": 58959
+    },
+    {
+      "icon_id": "813691",
+      "name": "客户",
+      "font_class": "kehu",
+      "unicode": "e625",
+      "unicode_decimal": 58917
+    },
+    {
+      "icon_id": "1092161",
+      "name": "钱",
+      "font_class": "qian",
+      "unicode": "e640",
+      "unicode_decimal": 58944
+    },
+    {
+      "icon_id": "1541244",
+      "name": "楼盘",
+      "font_class": "ziyuan",
+      "unicode": "e65c",
+      "unicode_decimal": 58972
+    },
+    {
+      "icon_id": "2815731",
+      "name": "退出",
+      "font_class": "tuichu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "2932846",
+      "name": "铃",
+      "font_class": "ling",
+      "unicode": "e805",
+      "unicode_decimal": 59397
+    },
+    {
+      "icon_id": "3978426",
+      "name": "首页",
+      "font_class": "shouye",
+      "unicode": "e684",
+      "unicode_decimal": 59012
+    },
+    {
+      "icon_id": "4165951",
+      "name": "钱",
+      "font_class": "qian1",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "4197861",
+      "name": "消息",
+      "font_class": "xiaoxi",
+      "unicode": "e67c",
+      "unicode_decimal": 59004
+    },
+    {
+      "icon_id": "4237201",
+      "name": "客户",
+      "font_class": "kehu1",
+      "unicode": "e697",
+      "unicode_decimal": 59031
+    },
+    {
+      "icon_id": "4933353",
+      "name": "客户",
+      "font_class": "kehu2",
+      "unicode": "e73d",
+      "unicode_decimal": 59197
+    },
+    {
+      "icon_id": "4933431",
+      "name": "消息",
+      "font_class": "xiaoxi1",
+      "unicode": "e764",
+      "unicode_decimal": 59236
+    },
+    {
+      "icon_id": "6193817",
+      "name": "人",
+      "font_class": "ren-copy",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "7055649",
+      "name": "退出",
+      "font_class": "tuichu1",
+      "unicode": "e72f",
+      "unicode_decimal": 59183
+    },
+    {
+      "icon_id": "7310555",
+      "name": "闭眼",
+      "font_class": "biyan",
+      "unicode": "e610",
+      "unicode_decimal": 58896
+    },
+    {
+      "icon_id": "10593814",
+      "name": "睁眼,打开,眼睛_jurassic",
+      "font_class": "jurassic_openeyes",
+      "unicode": "e6a0",
+      "unicode_decimal": 59040
+    },
+    {
+      "icon_id": "11175683",
+      "name": "收起",
+      "font_class": "shouqi",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "15267571",
+      "name": "展开",
+      "font_class": "zhankai",
+      "unicode": "e606",
+      "unicode_decimal": 58886
+    },
+    {
+      "icon_id": "17122698",
+      "name": "消息",
+      "font_class": "xiaoxi2",
+      "unicode": "e609",
+      "unicode_decimal": 58889
+    },
+    {
+      "icon_id": "17814576",
+      "name": "锁",
+      "font_class": "suo",
+      "unicode": "e615",
+      "unicode_decimal": 58901
+    },
+    {
+      "icon_id": "17832790",
+      "name": "客户",
+      "font_class": "kehu3",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    },
+    {
+      "icon_id": "18113689",
+      "name": "铃",
+      "font_class": "bell",
+      "unicode": "e69e",
+      "unicode_decimal": 59038
+    },
+    {
+      "icon_id": "18224126",
+      "name": "首页",
+      "font_class": "shouye1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "18916428",
+      "name": "楼",
+      "font_class": "lou",
+      "unicode": "e6b7",
+      "unicode_decimal": 59063
+    }
+  ]
+}
