@@ -1,0 +1,168 @@
+.cf {
+    zoom: 1;
+}
+.form--stack h2 a, .header, .plus {
+    position: relative;
+}
+.header {
+    width: 980px;
+    height: auto;
+    margin: 40px auto 30px;
+}
+.cf:after {
+    display: block;
+    clear: both;
+    height: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+.cf:after, .plus:after, .plus:before, .theme--maoyan_pianfang footer:before, q:after, q:before {
+    content: '';
+}
+.header .site-logo {
+    margin: 0;
+    width: 130px;
+    height: 47px;
+    background-position: -536px -748px;
+    background-repeat: no-repeat;
+    background-size: initial;
+    float: left;
+    display: block;
+    display: inline;
+    text-indent: -9999px;
+    overflow: hidden;
+}
+.header .site-logo {
+    width: 230px;
+    height: 45px;
+    background-position: -394px -677px;
+    background-image: url(/image/xuebi.png);
+    background-size: initial;
+}
+.footer {
+    margin: 0 auto 30px;
+    clear: both;
+    width: 980px;
+    font-size: 10px;
+    color: #999;
+}
+.footer .copyright {
+    text-align: center;
+    color: #ccc;
+}
+.footer .copyright .link,.footer .copyright a {
+    color: #ccc;
+}
+.pg-unitive-login .site-body {
+    margin: 0 auto 70px;
+    width: 980px;
+}
+.pg-unitive-login .promotion-banner {
+    float: left;
+    height: 370px;
+    margin: 0 115px 0 0;
+    width: 480px;
+}
+.login-section {
+    margin: 0 auto;
+    width: 270px;
+    background: #FFF;
+}
+.pg-unitive-login .login-section {
+    float: left;
+    padding-top: 0;
+}
+.login-section .phone-input-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0;
+    border: 1px solid #aaa;
+    background-color: #fff;
+    margin: 8px 0;
+    overflow: hidden;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.login-section .form-field {
+    padding-left: 0;
+}
+.form--stack .form-field {
+    padding-left: 0;
+}
+.form-field--icon {
+    position: relative;
+}
+.form-field {
+    position: relative;
+    padding: 8px 0 8px 110px;
+    zoom: 1;
+}
+.login-section {
+    float: left;
+    padding-top: 0;
+    margin-top:60px;
+}
+.promotion-banner {
+    float: left;
+    height: 370px;
+    margin: 0 115px 0 0;
+    width: 480px;
+}
+.login-section .phone-input-wrapper .phone-input {
+    padding-left: 5px;
+    border: none;
+    max-width: 200px!important;
+    outline: none;
+}
+.form-field .f-text {
+    height: 24px;
+    padding: 5px;
+    border: 1px solid #aaa;
+    line-height: 24px;
+    vertical-align: top;
+}
+
+.login-section .phone-input-wrapper .phone-input {
+    width: 260px;
+    padding-left: 5px;
+    border: none;
+    max-width: 300px!important;
+}
+.btn {
+    border: #e02025;
+    color: #FFF;
+    background: #ec454a;
+    background: linear-gradient(to bottom,#ec454a 0,#e02025 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ec454a', endColorstr='#e02025', GradientType=0 );
+}
+.btn, .btn-hot, .btn-normal {
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 7px 20px 6px;
+    font-size: 14px;
+    font-weight: 700;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+    letter-spacing: .1em;
+    text-align: center;
+    text-decoration: none;
+    border-width: 0 0 1px;
+    border-style: solid;
+    background-repeat: repeat-x;
+    border-radius: 2px;
+    -moz-user-select: -moz-none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+.site-body{
+    margin: 0 auto;
+    max-width: 1100px;
+}
+.site-body-wrapper{
+    margin-top: 70px;
+}

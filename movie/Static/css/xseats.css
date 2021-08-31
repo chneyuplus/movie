@@ -1,0 +1,402 @@
+@import url('./Header.css');
+@import url('./Footer.css');
+.header-placeholder {
+    height: 81px;
+}
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+.order-progress-bar {
+    height: 60px;
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+.order-progress-bar .step {
+    float: left;
+    width: 25%;
+}
+.order-progress-bar .step-num {
+    color: #fff;
+    font-size: 12px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 16px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #ffd8d7;
+    position: relative;
+    top: 10px;
+}
+.order-progress-bar .done .step-num {
+    background-color: #f03d37;
+}
+.order-progress-bar .bar {
+    width: 0;
+    height: 4px;
+    border-left: 150px solid #ffd8d7;
+    border-right: 150px solid #ffd8d7;
+}
+.order-progress-bar .first .bar {
+    border-left-color: transparent!important;
+}
+.order-progress-bar .done .bar {
+    border-color: #f03d37;
+}
+.order-progress-bar .step-text {
+    font-size: 14px;
+    color: #999;
+    display: inline-block;
+    margin-top: 10px;
+}
+.order-progress-bar .done .step-text {
+    color: #f03d37;
+}
+.order-progress-bar .last .bar {
+    border-right-color: transparent!important;
+}
+.main {
+    width: 100%;
+    border: 1px solid #e5e5e5;
+    font-size: 0;
+}
+.clearfix:after, .clearfix:before {
+    content: " ";
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.hall {
+    width: 820px;
+    display: inline-block;
+    vertical-align: top;
+}
+.side {
+    width: 340px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: inline-block;
+}
+.hall .seat-example {
+    margin: 30px 0 30px 118px;
+}
+.hall .seat-example .example {
+    display: inline-block;
+    font-size: 16px;
+    color: #666;
+    height: 26px;
+    line-height: 26px;
+    padding-left: 38px;
+    background-repeat: no-repeat;
+    margin-right: 50px;
+}
+.hall .seat-example .selectable-example {
+    background-image: url(/image/wei.png);
+}
+.hall .seat-example .sold-example {
+    background-image: url(/image/ywei.png);
+}
+.hall .seat-example .selected-example {
+    background-image: url(/image/zwei.png);
+}
+.hall .seat-example .couple-example {
+    padding-left: 77px;
+    background-image: url(/image/qwei.png);
+}
+.seats-block {
+    font-size: 0;
+    overflow: hidden;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+.seats-block .row-id-container {
+    width: 20px;
+    float: left;
+    margin-top: 112px;
+    white-space: normal;
+}
+.seats-block .row-id {
+    font-size: 16px;
+    color: #999;
+    margin-right: 40px;
+    margin-bottom: 10px;
+    display: inline-block;
+    width: 20px;
+    height: 26px;
+    line-height: 29px;
+    text-align: center;
+}
+.seats-block .seats-container {
+    margin-left: 50px;
+    overflow: auto;
+    position: relative;
+    padding-top: 112px;
+}
+.seats-block .screen-container {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+}
+.seats-block .screen-container .screen {
+    width: 550px;
+    padding-top: 50px;
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    background: url(/image/screen.png) no-repeat;
+    background-position-x: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+.seats-block .screen-container .c-screen-line {
+    width: 0;
+    border-left: 1px dashed #e5e5e5;
+    position: absolute;
+    top: 90px;
+    bottom: 0;
+    left: 50%;
+}
+.seats-block .seats-wrapper {
+    display: inline-block;
+    min-width: 550px;
+}
+
+.seats-block .row {
+    white-space: nowrap;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.seats-block .seat {
+    display: inline-block;
+    font-size: 0;
+    width: 30px;
+    height: 26px;
+    margin: 0 5px;
+    background: url(/image/wei.png) no-repeat;
+    background-position: 0 1px;
+}
+/* 空座位 */
+.seats-block .seat.empty {
+    background-image: none;
+}
+/* 红色 */
+.seats-block .seat.sold {
+    background-image: url(/image/ywei.png);
+}
+/* 绿色 */
+.seats-block .seat.selected {
+    background-image: url(/image/zwei.png);
+}
+.side .movie-info .poster {
+    width: 115px;
+    height: 158px;
+    border: 2px solid #fff;
+    -webkit-box-shadow: 0 2px 7px 0 hsla(0,0%,53%,.5);
+    box-shadow: 0 2px 7px 0 hsla(0,0%,53%,.5);
+    float: left;
+}
+.side .movie-info .content {
+    margin-left: 140px;
+}
+.side .movie-info .poster img {
+    width: 100%;
+    height: 100%;
+}
+.side .movie-info .content .name {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    margin: 0 0 14px;
+}
+.side .info-item {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px;
+}
+.side .info-item .value {
+    color: #151515;
+    margin-left: 2px;
+}
+.side .show-info {
+    margin-top: 20px;
+}
+.side .show-info .info-item {
+    margin-bottom: 9px;
+}
+.side .show-info .info-item>span {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 14px;
+}
+.side .show-info .info-item .value {
+    width: 85%;
+}
+.side .show-info .info-item .screen {
+    color: #f03d37;
+}
+.side .ticket-info {
+    padding: 20px 0 10px;
+    border-top: 1px dashed #e5e5e5;
+    border-bottom: 1px dashed #e5e5e5;
+}
+.side .ticket-info .buy-limit {
+    font-size: 14px;
+    color: #999;
+    margin: 0;
+}
+.side .ticket-info .no-selected {
+    font-size: 14px;
+    color: #333;
+    text-align: center;
+    margin: 28px 0 39px;
+}
+.side .ticket-info .no-selected span {
+    color: #f03d37;
+}
+.side .ticket-info .total-price {
+    font-size: 14px;
+    color: #333;
+}
+.side .ticket-info .total-price .price {
+    color: #f03d37;
+    font-size: 24px;
+}
+.side .ticket-info .text {
+    font-size: 14px;
+    color: #999;
+    float: left;
+}
+.side .ticket-info .ticket-container {
+    margin-left: 42px;
+    margin-bottom: 20px;
+    position: relative;
+    top: -5px;
+}
+.side .confirm-order {
+    padding: 20px 0;
+    text-align: center;
+}
+#iLoginComp {
+    min-height: 223px;
+}
+#iLoginComp .iLoginComp-wrapper {
+    display: inline-block;
+    width: 260px;
+    padding: 0;
+}
+.iLoginComp-wrapper .iLoginComp-phone-num-wrapper, .iLoginComp-wrapper .iLoginComp-verify-code-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.iLoginComp-wrapper .iLoginComp-code-input, .iLoginComp-wrapper .iLoginComp-phone-num-input {
+    display: block;
+    width: 218px;
+    height: 40px;
+    border: 1px solid #e5e5e5;
+    border-radius: 50px;
+    margin-bottom: 6px;
+    padding: 0 20px;
+    color: #333;
+    background: #fff;
+    font-size: 14px;
+}
+.iLoginComp-phone-num-input, .iLoginComp-phone-num-input:focus {
+    outline: none;
+    background-color: inherit;
+}
+.iLoginComp-wrapper .iLogincomp-opbtn-wrapper {
+    margin-top: 45px;
+}
+.iLoginComp-wrapper .iLoginComp-login-btn-wrapper.disable {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #dedede;
+    pointer-events: none;
+}
+.iLoginComp-wrapper .iLoginComp-login-btn-wrapper {
+    width: 260px;
+    line-height: 42px;
+    border-radius: 21px;
+    font-size: 16px;
+    color: #fff;
+}
+.iLoginComp-login-btn-wrapper{    
+    text-align: center;
+    color: #999;
+    background: #e5e5e5;
+    height: 2.8em;
+    line-height: 2.8em;
+    border-radius: .3em;
+    width: 100%;
+    display: block;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);}
+.iLoginComp-wrapper .iLoginComp-login-btn-wrapper.disable {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: #dedede;
+    pointer-events: none;
+}
+.iLoginComp-wrapper .iLoginComp-verify-code-wrapper {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+.iLoginComp-wrapper .iLoginComp-send-verify-code-text {
+    display: inline-block;
+    position: absolute;
+    top: 11px;
+    right: 15px;
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    font-size: 14px;
+    color: #ccc;
+    background: transparent;
+}
+.iLoginComp-code-input, .iLoginComp-code-input:focus {
+    outline: none;
+    background-color: inherit;
+}
+.has-ticket{
+    height: 30px;
+}
+.side .ticket-info .ticket {
+    cursor: default;
+    position: relative;
+    font-size: 12px;
+    color: #f03d37;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 12px 10px 0;
+    background: url(/image/tick.png) no-repeat;
+}
+.side .ticket-info .ticket:hover:after {
+    content: "";
+    background: url(/image/tickclose.png) no-repeat;
+    width: 16px;
+    height: 16px;
+    background-size: 16px;
+    position: absolute;
+    top: -7px;
+    right: -7px;
+}

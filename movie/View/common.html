@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影院热映大片_热映电影票房_高清电影影视大全-猫眼电影(高仿)</title>
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <meta name="description" content="猫眼电影为您提供热映电影大片选座购票服务，以及对热映电影评分、评价等信息介绍。更多热映电影选座购票信息请关注猫眼电影官网。">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/common.css">
+</head>
+
+<body>
+    <!-- Header导航 -->
+    <%-include('./template/Header.html',{menuIndex,Header,user})%>
+        <div class="header-placeholder"></div>
+        <div class='container'>
+            <div class='content'>
+                <form action="/common/sendMsg" method="POST">
+                    <textarea id='content' name='content' placeholder="输入评论..."></textarea>
+                    <button type="submit" class='submit'>发表</button>
+                </form>
+            </div>
+        </div>
+        <!-- 底部导航 -->
+        <%-include('./template/Footer.html')%>
+</body>
+
+</html>

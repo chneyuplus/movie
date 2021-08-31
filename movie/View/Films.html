@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影院热映大片_热映电影票房_高清电影影视大全-猫眼电影(高仿)</title>
+    <link rel="icon" href="/favicon/favicon.ico"  type="image/x-icon">
+    <meta name="description" content="猫眼电影为您提供热映电影大片选座购票服务，以及对热映电影评分、评价等信息介绍。更多热映电影选座购票信息请关注猫眼电影官网。">
+    <link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/Films.css">
+</head>
+<body>
+    <!-- Header导航 -->
+    <%-include('./template/Header.html',{menuIndex,Header,user})%>
+    <div class="header-placeholder"></div>
+    <!--切换选项卡 -->
+    <div class='subnav'>
+        <ul class='navbar'>
+            <% for(let i=0;i<showType.length;i++){%>
+              <li>
+                <a class='<%=showType[i].type==showTypeid?'active':''%>' href="?<%=showTypeid?`showType=${showType[i].type}`:''%>"><%=showType[i].name%></a>
+              </li>
+            <%}%>
+        </ul>
+    </div>
+    <!-- 电影集合 -->
+    <div class='container'>
+        <div class='movies-channel'>
+            <!-- 电影类别切换 -->
+            <div class='tags-panel'>
+                <ul class='tags-lines'>
+                    <li class="tags-line">
+                        <div class="tags-title">类型 :</div>
+                        <ul class="tags">
+                            <li class="<%=!catId?'active':''%>" >
+                              <a  href="?<%=sourceId?`sourceId=${sourceId}&`:''%><%=yearId?`&yearId=${yearId}`:''%><%=showTypeid?`showType=${showTypeid}`:''%>" style="cursor: default">全部</a>
+                            </li>
+                            <% for(let i=0;i<movieType.length;i++){%>
+                                <li class="<%=catId==movieType[i].id?'active':''%>"> 
+                                  <a  href="?<%=`catId=${movieType[i].id}`%><%=sourceId?`&sourceId=${sourceId}`:''%><%=yearId?`&yearId=${yearId}`:''%><%=showTypeid?`&showType=${showTypeid}`:''%>" style="cursor: default"><%=movieType[i].type%></a
+                                </li>
+                            <%}%>
+                          </ul>
+                    </li>
+                    <li class="tags-line tags-line-border" >
+                        <div class="tags-title">区域 :</div>
+                        <ul class="tags">
+                          <li class="<%=!sourceId?'active':''%>">
+                            <a  href="?<%=catId?`catId=${catId}&`:''%><%=yearId?`yearId=${yearId}&`:''%><%=showTypeid?`showType=${showTypeid}`:''%>" style="cursor: default">全部</a>
+                          </li>
+                          <% for(let i=0;i<movieCity.length;i++){%>
+                            <li class="<%=sourceId==movieCity[i].id?'active':''%>">
+                              <a  href="?<%=catId?`catId=${catId}&`:''%><%=`sourceId=${movieCity[i].id}`%><%=yearId?`&yearId=${yearId}`:''%><%=showTypeid?`&showType=${showTypeid}`:''%>" style="cursor: default"><%=movieCity[i].cname%></a
+                            </li>
+                          <%}%>
+                        </ul>
+                      </li>
+                      <li class="tags-line tags-line-border">
+                        <div class="tags-title">年代 :</div>
+                        <ul class="tags">
+                          <li class="<%=!yearId?'active':''%>">
+                            <a  href="?<%=catId?`catId=${catId}&`:''%><%=sourceId?`sourceId=${sourceId}&`:''%><%=showTypeid?`showType=${showTypeid}`:''%>" style="cursor: default">全部</a>
+                          </li>
+                          <% for(let i=0;i<movieEra.length;i++){%>
+                            <li class="<%=yearId==movieEra[i].id?'active':''%>">
+                              <a  href="?<%=catId?`catId=${catId}&`:''%><%=sourceId?`sourceId=${sourceId}&`:''%><%=`yearId=${movieEra[i].id}`%><%=showTypeid?`&showType=${showTypeid}`:''%>" style="cursor: default"><%=movieEra[i].year%></a
+                            </li>
+                          <%}%>
+                        </ul>
+                      </li>
+                </ul>
+            </div>
+            <!-- 电影集合 -->
+            <div class='movies-panel'>
+                <div class="movies-sorter">
+                    <div class="cat-sorter">
+                      <ul>
+                        <% for(let i=0;i<3;i++){%>
+                          <li>
+                            <a href='?sortId=<%=i%>' class="sort-control-group"  style="cursor: default">
+                              <span class="sort-control sort-radio <%=checksortid==i?'sort-radio-checked':''%>"></span>
+                              <span class="sort-control-label"><%=sortInfo[i].name%></span>
+                            </a>
+                          </li>
+                        <%}%>
+                      </ul>
+                    </div>
+                </div>
+                  <!-- 电影列表 -->
+                  <div class='movies-list'>
+                      <!-- 如果没有电影 报错 未找到 -->
+                      <%if(!movieDetail.length){%>
+                        <div class='no-movie'>
+                          抱歉，没有找到相关结果，请尝试用其他条件筛选。
+                        </div>
+                      <%}else{%>
+                        <dl class='movie-list'>
+                          <% for(let i=0;i<movieDetail.length;i++){%>
+                          <dd>
+                              <div class="movie-item film-channel">
+                                  <a href="/films/<%=movieDetail[i].id%>" target="_blank" >
+                                    <div class="movie-poster">
+                                      <img class="poster-default" src="/image/loading_2.e3d934bf.png">
+                                      <img alt="<%=movieDetail[i].name%>" src="<%=movieDetail[i].image%>">
+                                    </div>
+                                  </a>
+                                  <div class="channel-action channel-action-sale">
+                                      <a>购票</a>
+                                  </div>
+                              </div>
+                              <div class="channel-detail movie-item-title" title="<%=movieDetail[i].name%>">
+                                  <a href="/films/<%=movieDetail[i].id%>" target="_blank" ><%=movieDetail[i].name%></a>
+                              </div>
+                              <div class='channel-detail-orange'>
+                                  <% let str=movieDetail[i].score.toString()%>
+                                  <i class="integer"><%=str.charAt(0)%>.</i>
+                                  <i class="fraction"><%=str.charAt(str.length-1)%></i>
+                              </div>
+                              <!-- 鼠标悬停层 -->
+                              <div class='movie-detail'>
+                                <p><span><%=movieDetail[i].name%></span></p>
+                                <p><span>类型：</span>
+                                 <% for(let k=0;k<movieDetail[i].typeList.length;k++){%>
+                                  <%=movieDetail[i].typeList[k]%>
+                                  <%if(k<movieDetail[i].typeList.length-1){%>
+                                    /
+                                  <%}%>
+                                 <%}%>
+                                </p>
+                                <p><span>上映时间：</span><%=new Date(movieDetail[i].uptimes).toLocaleDateString()%></p>
+                              </div>
+                          </dd>
+                          <%}%>
+                        </dl>
+                      <%}%>
+                  </div>
+                <!-- 分页 -->
+                <%if(movieDetail.length){%>
+                  <div class='movies-pager'>
+                    <ul class="list-pager">
+                        <% if(nowPage>=2){%>
+                            <li>
+                                <a class="page_1" href="/films?now=up" style="cursor: default">上一页</a>
+                            </li>
+                        <%}%>
+                        <% let center=Math.ceil(pageEle/2);%>
+                        <%let num=Number(nowPage)+Number(center)%>
+                        <%let numnext=Number(allPage)-Number(pageEle)%>
+                        <%let numn=Number(allPage)-Number(center)%>
+                        <%for(let i=1;i<=pageEle;i++){%>
+                            <%if(num<=allPage){%>
+                                <% if(nowPage<=center){%>
+                                    <li class='<%=nowPage==i?'active':''%>'>
+                                        <a class="page_1" href="/films?now=<%=i%>" style="cursor: default"><%=i%></a>
+                                    </li>
+                                <%}%>
+                                <% if(nowPage>center){%>
+                                    <li class='<%=nowPage==(nowPage-center)+i?'active':''%>'>
+                                        <a class="page_1" href="/films?now=<%=i+(nowPage-center)%>" style="cursor: default"><%=i+(nowPage-center)%></a>
+                                    </li>
+                                <%}%>
+                            <%}else{%>
+                                <li class='<%=nowPage==i+numnext?'active':''%>'>
+                                    <a class="page_1" href="/films?now=<%=i+numnext%>" style="cursor: default"><%=i+numnext%></a>
+                                </li>
+                            <%}%>
+                        <%}%>
+                        <% if(nowPage<=numn){%>
+                            <li>
+                                <a class="page_1" href="/films?now=down" style="cursor: default">下一页</a>
+                            </li>
+                        <%}%>
+                    </ul>
+                </div>
+                <%}%>
+            </div>
+        </div>
+    </div>
+    <!-- 底部导航 -->
+    <%-include('./template/Footer.html')%>
+</body>
+</html>

@@ -1,0 +1,9 @@
+//导航的配置
+module.exports=[
+    {name:'首页',href:'/'},
+    {name:'电影',href:'/films'},
+    {name:'影院',href:'/cinemas'},
+    {name:'榜单',href:'/board'},
+    {name:'热点',href:'/news'},
+    {name:'商城',href:'/edimall'},
+]

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>影院热映大片_热映电影票房_高清电影影视大全-猫眼电影(高仿)</title>
+    <link rel="icon" href="/favicon/favicon.ico"  type="image/x-icon">
+    <meta name="description" content="猫眼电影为您提供热映电影大片选座购票服务，以及对热映电影评分、评价等信息介绍。更多热映电影选座购票信息请关注猫眼电影官网。">
+    <link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/Filmsdetail.css">
+</head>
+<body>
+     <!-- Header导航 -->
+     <%-include('./template/Header.html',{menuIndex,Header,user})%>
+     <div class="header-placeholder"></div>
+     <div class="banner">
+        <div class='wrapper clearfix'>
+           <div class='celeInfo-left'>
+               <div class='avatar-shadow'>
+                   <img class="avatar" src="<%=movie.image%>" alt="<%=movie.name%>">
+                   <div class='movie-ver'>
+                       <% if(movie.mType===1){%>
+                           <i class='m3d'></i>
+                       <%}else if(movie.mType===2){%>
+                           <i class='imax3d'></i>
+                       <%}else if(movie.mType===3){%>
+                           <i class='imax2d'></i>
+                       <%}else{%>
+                           <i></i>
+                       <%}%>		
+                   </div>
+               </div>
+           </div>
+           <div class='celeInfo-right clearfix'>
+               <div class='movie-brief-container'>
+                   <h1 class='name'><%=movie.name%></h1>
+                   <div class="ename ellipsis"><%=movie.enName%></div>
+                   <ul>
+                       <li class="ellipsis">
+                           <%for(let i=0;i<movie.typelist.length;i++){%>
+                               <a class="text-link" href="/films?catId=<%=movie.typelist[i].id%>" target="_blank"><%=movie.typelist[i].type%></a>
+                           <%}%>
+                       </li>
+                       <li class="ellipsis">
+                       <%=movie.cname%>
+                         /  <%=movie.times%>
+                       </li>
+                       <li class="ellipsis"> <%=new Date(movie.uptimes).toLocaleString()%>/<%=movie.upaddress%></li>
+                     </ul>
+               </div>
+               <div class='action-buyBtn'>
+                   <div class="action clearfix">
+                       <a class="wish " >
+                         <div>
+                           <i class="icon wish-icon"></i>
+                             <span class="wish-msg" data-act="wish-click">想看</span>
+                         </div>
+                       </a>
+                       <a class="score-btn ">
+                         <div>
+                           <i class="icon score-btn-icon"></i>
+                           <span class="score-btn-msg" >
+                               评分
+                           </span>
+                         </div>
+                       </a>
+                     </div>
+                     <% if(movie.isup==1){%>
+                        <a class="btn buy" href="/cinemas?movieId=<%=movie.id%>" target="_blank">特惠购票</a>
+                     <%}%>
+               </div>
+               <div class='movie-stats-container'>
+                   <div class="movie-index">
+                       <p class="movie-index-title">猫眼口碑</p>
+                       <div class="movie-index-content score normal-score">
+                           <span class="index-left info-num ">
+                             <span class="stonefont"><%=movie.score%></span>
+                           </span>
+                           <div class="index-right">
+                             <div class="star-wrapper">
+                               <div class="star-on" style="width:<%=(movie.score/10*100)%>%;"></div>
+                             </div>
+                              <span class="score-num"><span class="stonefont">1230</span>人评分</span>
+                           </div>
+                       </div>
+                   </div>
+                     <div class="movie-index">
+                       <p class="movie-index-title">累计票房</p>
+                       <div class="movie-index-content box">
+                           <span class="stonefont"><%=movie.totlemoney/10000%></span><span class="unit">万</span>
+                       </div>
+                     </div>
+               </div>
+           </div>
+        </div>
+    </div>
+    <div class='container'>
+        <div class='main-content-container clearfix'>
+            <div class='main-content'>
+                <div class='tab-container tab-movie-info'>
+                    <div class="crumbs-nav-container">
+                        <a href="/">猫眼电影</a> &gt; <a href="/films">电影</a> &gt; <span>热带往事</span>
+                    </div>
+                </div>
+                <div class="tab-title active ">介绍</div>
+                <div class='tab-content-container '>
+                    <div class="mod-title">
+                        <h2>剧情简介</h2>
+                    </div>
+                    <div class="mod-content">
+                        <span class="dra"><%=movie.detail%></span>
+    
+                    </div>
+                </div>
+                <div class='module'>
+                    <div class="mod-title">
+                        <h2>热门短评</h2>
+                      </div>
+                    <div class='mod-content'>
+                        <ul>
+                            <% for(let i=0;i<common.length;i++){%>
+                                <li class='comment-container'>
+                                    <div class="portrait-container">
+                                        <div class="portrait">
+                                          <img src="<%=common[i].face%>" alt="">
+                                        </div>
+                                        <i class="level-1-icon"></i>
+                                      </div>
+                                    <div class="main">
+                                        <div class='main-header clearfix'>
+                                            <div class='user'><span class="name"><%=common[i].nickname%></span></div>
+                                            <div class='time'>
+                                                <span><%=new Date(common[i].instime).toLocaleString()%></span>
+                                            </div>
+                                        </div>
+                                        <div class='comment-content'>
+                                            <%=common[i].content%>
+                                        </div>
+                                    </div>
+                                </li>
+                            <%}%>
+                            
+                        </ul>
+                        <a class="comment-entry" href="/common?movieid=<%=movie.id%>">写短评</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- 底部导航 -->
+    <%-include('./template/Footer.html')%>
+</body>
+</html>

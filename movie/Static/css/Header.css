@@ -1,0 +1,288 @@
+
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    min-width: 1200px;
+    background-color: #fff;
+    border-bottom: 1px solid #d8d8d8;
+}
+.header .header-inner {
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+}
+.header a.logo {
+    line-height: 100em;
+}
+.header .logo, .header a.logo {
+    float: left;
+    width: 133px;
+    height: 80px;
+}
+.header .logo {
+    background: url('/image/logo.png') no-repeat 0;
+    background-size: contain;
+    overflow: hidden;
+}
+.header .nav {
+    display: inline-block;
+    background-color: #fff;
+    overflow: hidden;
+    float: left;
+}
+.header form, .header h3, .header input, .header li, .header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: none;
+}
+.city-container {
+    position: relative;
+    float: left;
+    margin: 0 8px;
+    height: 100%;
+}
+.city-container .city-selected {
+    cursor: pointer;
+    height: 100%;
+    padding: 0 10px;
+    border: 1px solid transparent;
+    border-width: 0 1px;
+    z-index: 101;
+}
+.city-container .city-name {
+    display: inline-block;
+    margin-top: 32px;
+    color: #333;
+}
+.caret {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 5px solid #666;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    -webkit-transition: transform .2s ease;
+    transition: transform .2s ease;
+}
+.city-container.active:after {
+    content: " ";
+    position: absolute;
+    height: 10px;
+    bottom: -1px;
+    left: 1px;
+    right: 1px;
+    background-color: #fff;
+    z-index: 200;
+}
+.city-container.active .caret{
+    transform: rotatez(180deg);
+    -webkit-transform: rotatez(180deg);
+}
+.city-container .city-list {
+    background-color: #fff;
+    border: 1px solid #d8d8d8;
+    position: absolute;
+    z-index: 100;
+    width: 478px;
+    height: 330px;
+    overflow-y: scroll;
+    left: 0;
+    top: 80px;
+    display: none;
+}
+.city-container.active .city-list{
+    display: block;
+}
+.city-container .city-list .city-list-header {
+    padding-left: 20px;
+    line-height: 58px;
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+.city-container .city-list .city-list-header a {
+    cursor: pointer;
+}
+.city-container .city-list span.recent-city-title {
+    width: 80px;
+    display: block;
+    line-height: 24px;
+    float: left;
+}
+.city-container .city-list div.recent-city-list {
+    line-height: 24px;
+    margin-left: 80px;
+}
+.city-container .city-list div.recent-city-list a {
+    display: inline-block;
+    padding: 0 5px;
+    text-align: center;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.city-container .city-list ul li {
+    line-height: 30px;
+}
+.city-container .city-list ul li span {
+    margin-left: 20px;
+    width: 20px;
+    text-align: center;
+    float: left;
+    vertical-align: top;
+    display: block;
+    background-color: #eee;
+    font-weight: 700;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.header .nav .navbar li a:hover {
+    color: #ef4238;
+}
+.city-container .city-list ul li div {
+    margin-left: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+.city-container .city-list ul li div a {
+    display: inline-block;
+    line-height: 24px;
+    margin-top: 3px;
+    padding: 0 5px;
+    text-align: center;
+    cursor: pointer;
+}
+.header .nav .navbar li {
+    float: left;
+}
+.header .nav .navbar li a {
+    text-align: center;
+    display: inline-block;
+    height: 80px;
+    line-height: 80px;
+    width: 70px;
+    font-size: 18px;
+    color: #333;
+}
+.header .nav .navbar li a.active {
+    color: #fff;
+    background-color: #ef4238;
+}
+.header .user-info {
+    float: right;
+    position: relative;
+    z-index: 9999;
+    height: 100%;
+}
+.header .user-info .user-avatar {
+    display: block;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: none;
+    padding: 0 10px;
+    width: 56px;
+    height: 100%;
+}
+.header .user-info .user-avatar img {
+    margin-top: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.header .user-info .user-avatar .caret {
+    position: absolute;
+    top: 39px;
+    right: 10px;
+}
+.header .user-info .user-avatar:hover .caret {
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.header .user-info .user-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 80px;
+    border: 1px solid #d8d8d8;
+    background-color: #fff;
+    font-size: 14px;
+    color: #333;
+    text-align: right;
+    padding: 15px 10px 5px;
+    text-align: center;
+}
+.header .user-info .no-login-menu {
+    padding: 15px 24px 5px;
+}
+.header .user-info .login-menu {
+    padding: 15px 24px 5px;
+}
+.header .user-info .user-menu li {
+    margin-bottom: 6px;
+}
+.header .user-info .user-menu li>a {
+    color: #999;
+    display: block;
+    word-break: keep-all;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.header .user-info .user-avatar:hover .user-menu {
+    display: block;
+}
+.header .user-info .user-avatar:hover {
+    border-color: #d8d8d8;
+}
+.header form {
+    float: right;
+    margin: 20px 10px 0 0;
+    position: relative;
+}
+.header form .search {
+    display: inline-block;
+    height: 40px;
+    line-height: 1.2;
+    width: 220px;
+    padding: 0 40px 0 20px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    border-radius: 30px;
+    background-color: #faf8fa;
+    overflow: hidden;
+    color: #333;
+}
+.header form input {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: none;
+}
+.header form .submit {
+    display: inline-block;
+    position: absolute;
+    left: 180px;
+    top: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #ef4238;
+    border-radius: 30px;
+    background-image: url('/image/sumit.png');
+    cursor: pointer;
+}
+.header-placeholder {
+    height: 81px;
+}
+.header .user-info .user-avatar:hover:after {
+    content: " ";
+    position: absolute;
+    height: 10px;
+    bottom: -1px;
+    left: 1px;
+    right: 1px;
+    background-color: #fff;
+}

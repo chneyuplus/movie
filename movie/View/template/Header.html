@@ -1,0 +1,63 @@
+<div class='header'>
+    <div class='header-inner '>
+        <h1><a href="/" class="logo">猫眼电影</a></h1>
+        <div class='city-container'>
+            <div class='city-selected'>
+                <div class='city-name'>
+                    西安
+                    <span class='caret'></span>
+                </div>
+            </div>
+            <div class='city-list'>
+                <div class='city-list-header'>
+                    定位城市：
+                    <a class="js-geo-city">西安</a>
+                </div>
+                <div class='city-list-header'>
+                    <span class="recent-city-title">近期定位：</span>
+                    <div class='recent-city-list'>
+                        <a class="js-recent-city">保定</a>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <span>A</span>
+                        <div>
+                            <a class="js-city-name">安州区</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class='nav'>
+            <ul class="navbar">
+                <% Header.map(({name,href},index)=>{%>
+                    <% if(menuIndex==index){%>
+                        <li><a href="<%=href%>" class="active"><%=name%></a></li>
+                    <%}else{%>
+                        <li><a href="<%=href%>"><%=name%></a></li>
+                    <%}%>
+                <%})%>
+            </ul>
+        </div>
+        <div class='user-info'>
+            <div class='user-avatar J-login'>
+                <img src="<%=user?user.face:'/image/default.png'%>" alt="">
+                <span class='caret'></span>
+                <% if(!user){%>
+                    <ul class='user-menu no-login-menu'>
+                        <li><a href="javascript:void(0)">登录</a></li>
+                    </ul>
+                <%}else{%>
+                    <ul class='user-menu login-menu'>
+                        <li><a href="javascript:void(0)">设置</a></li>
+                    </ul>
+                <%}%>
+            </div>
+        </div>
+        <form action="/query" target="_blank" class="search-form">
+            <input name="kw" class="search" type="search" maxlength="32" placeholder="找影视剧、影人、影院" autocomplete="off">
+            <input class="submit" type="submit" value="">
+        </form>
+    </div>
+</div>
